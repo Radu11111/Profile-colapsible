@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS | Profile-colapsible</title>
+    <style>
+        body {
+            background-color: #223;
+        }
+        .profile {
+            background-color: #334;
+            text-align: center;
+            padding: 20px ;
+            margin: 2% auto;
+            max-width: 900px;
+            min-width: 400px;
+            font-family:Arial;
+            font-size: 20px;
+        }
+         .profile img {
+            width: 200px;
+        }
+        .profile h2 {
+            color: white;
+        }
+        .profile>ol {
+            list-style: none;
+        }
+        .profile ol {
+            text-align:left;
+            color: orange;
+        }
+        .profile ol>li>h3 {
+            margin: 5px;
+        }
+        .profile table td {
+            width: 100px;
+            padding: 10px;
+        }
+        .profile table .cell {
+            background-color: #222;
+        }
+        .profile table .cell:hover {
+            color: violet;
+            font-size: 22px;
+        }
+        .profile a {
+            color: orange;
+            text-decoration: none;
+        }
+        #bio {
+            transition: 0.5s;
+            height: 0;
+            overflow: hidden;
+            margin: 0 0 0 10px;
+        }
+        #bio:target {
+            height: 130px;
+        
+        }
+        #interests {
+             transition: 0.5s;
+            height: 0;
+            overflow: hidden;
+        }
+        #interests:target {
+            height: 70px;
+        }
+        #experience {
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 20px;
+            display: none;
+        }
+        #experience:target {
+            display: block;
+        }
+        #abilities {
+            transition: 0.5s;
+            height: 0;
+            overflow: hidden;
+        }
+        #abilities:target {
+            height: 100px;
+        
+        }
+        #contact {
+            transition: 0.5s;
+            height: 0;
+            overflow: hidden;
+        }
+        #contact:target {
+            height: 99px;
+        }
+         .profile form input {
+             margin-right: 40px;
+             height: 30px;
+         }
+          .profile form input:focus {
+             outline: none;
+             border: 3px solid yellow;   
+          }
+        .profile form button {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid #223;
+            height: 50px;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 20px;
+            background-color: transparent;
+            color: white;
+        }
+        .profile form button:hover {
+            background-color: #113;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile">
+        <img src="avataaars.png" alt="John Doe avatar">
+        <h2>John Doe</h2>
+
+        <ol>
+            <li>
+                <h3> <a href="#bio">Biography</a></h3>
+                <p id="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi dignissimos possimus quis eum obcaecati harum porro voluptates voluptate praesentium, reprehenderit accusantium eos expedita pariatur. Temporibus eius iure, molestiae, repellendus similique commodi itaque blanditiis doloremque cupiditate incidunt nemo repellat at optio quaerat dolorem voluptate eos explicabo? Rerum animi perferendis eum beatae?</p>
+            </li>
+            <li>
+                <h3> <a href="#interests">Interests</a></h3>
+                <ol id="interests">
+                    <li>Fishing</li>
+                    <li>Hacking</li>
+                    <li>Dark web</li>
+                </ol>
+            </li>
+            <li>
+                <h3> <a href="#experience">Experience</a></h3>
+                <table id="experience">
+                    <tr>
+                        <td class="cell">Company</td>
+                        <td class="cell">Duration</td>
+                        <td class="cell">Domain</td>
+                    </tr>
+                    <tr>
+                        <td>1)SEMSEO</td>
+                        <td>2 year</td>
+                        <td>SEO</td>
+                    </tr>
+                    <tr>
+                        <td>2)Vanar</td>
+                        <td>4 year</td>
+                        <td>full stack dev.</td>
+                    </tr>
+                </table>
+            </li>
+            <li>
+                <h3> <a href="#abilities">Abilities</a></h3>
+                <ul id="abilities">
+                    <li>Knowledge of English</li>
+                    <li>Effective communication</li>
+                    <li>Resistance to stress</li>
+                    <li>Teamwork ability</li>
+                </ul>
+            </li>
+            <li>
+                <h3> <a href="#contact">Contact info</a></h3>
+            <form id="contact">
+                <input type="text"
+                 placeholder="Your name">
+                <input type="text" 
+                placeholder="Your phone"
+                pattern="373-[0-9]{3}-[0-9]{3}-[0-9]{3}">
+                <input type="text" 
+                placeholder="Your email">
+                <button>Click to send</button>
+
+            </form>
+            </li>
+        </ol>
+    </div>
+    
+</body>
+</html>
